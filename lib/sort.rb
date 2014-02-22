@@ -115,7 +115,7 @@ module Algorithms::Sort
   private
   def self.merge(ary1, ary2)
     sorted = []
-    unless ary1.empty or ary2.empty?
+    until ary1.empty or ary2.empty?
       ary1.first < ary2.first ? sorted << ary1.shift : sorted << ary2.shift
     end
     sorted + ary1 + ary2
